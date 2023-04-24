@@ -94,3 +94,4 @@ Most people won't complete all of this and that is OK.
 Click an emoji to tell us.
 
 <!-- END GENERATED SECTION DO NOT EDIT -->
+.
