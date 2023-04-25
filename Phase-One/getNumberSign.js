@@ -1,10 +1,10 @@
 const getNumberSign = (n) => {
   if (n < 0) {
-    return "negative";
+    return 'negative';
   } else if (n === 0) {
-    return "zero";
+    return 'zero';
   } else {
-    return "positive";
+    return 'positive';
   }
 };
 
