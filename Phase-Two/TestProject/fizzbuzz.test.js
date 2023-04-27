@@ -7,4 +7,7 @@ describe('fizzbuzz', () => {
   it('prints fizz for mutiples of 3', () => {
     expect(fizzBuzz(3)).toBe('fizz');
   });
+  it('prints buzz for multiples of 5', () => {
+    expect(fizzBuzz(5)).toBe('buzz');
+  });
 });
