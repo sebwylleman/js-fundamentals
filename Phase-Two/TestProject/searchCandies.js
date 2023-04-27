@@ -16,7 +16,11 @@ const candies = [
 
 const searchCandies = (search, maxPrice) => {
   return candies
-    .filter((candy) => candy.name.startsWith(search) && candy.price < maxPrice)
+    .filter(
+      (candy) =>
+        candy.name.toLowerCase().startsWith(search.toLowerCase()) &&
+        candy.price < maxPrice
+    )
     .map((candy) => candy.name);
 };
 

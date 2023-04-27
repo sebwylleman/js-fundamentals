@@ -13,4 +13,7 @@ describe('searchCandies', () => {
   it("returns candies with prefix 'Ma' and maximum price: -2", () => {
     expect(searchCandies('Ma', -2)).toEqual([]);
   });
+  it('returns candies regardless of case', () => {
+    expect(searchCandies('ma', 11)).toEqual(['Mars', 'Maltesers']);
+  });
 });
