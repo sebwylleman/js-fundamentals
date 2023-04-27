@@ -1,31 +1,13 @@
 const fizzBuzz = (n) => {
   if (n % 3 === 0 && n % 5 === 0) {
-    console.log('fizzbuzz');
+    return 'fizzbuzz';
   } else if (n % 3 === 0) {
-    console.log('fizz');
+    return 'fizz';
   } else if (n % 5 === 0) {
-    console.log('buzz');
+    return 'buzz';
   } else {
-    console.log(n);
+    return n;
   }
 };
-
-fizzBuzz(3);
-// 'Fizz'
-
-fizzBuzz(5);
-// 'Buzz'
-
-fizzBuzz(8);
-// 8
-
-fizzBuzz(15);
-// 'FizzBuzz'
-
-fizzBuzz(18);
-// 'Fizz'
-
-fizzBuzz(20);
-// 'Buzz'
 
 module.exports = fizzBuzz;
