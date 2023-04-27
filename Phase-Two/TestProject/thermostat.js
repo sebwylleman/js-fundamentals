@@ -8,6 +8,9 @@ class Thermostat {
   up() {
     this.temperature += 1;
   }
+  down() {
+    // fill in
+  }
 }
 
 module.exports = Thermostat;
