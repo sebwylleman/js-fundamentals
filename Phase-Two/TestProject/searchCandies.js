@@ -14,8 +14,10 @@ const candies = [
   { name: 'Fraise Tagada', price: 5.99 },
 ];
 
-const searchCandies = (item, maxPrice) => {
-  // do something
+const searchCandies = (search, maxPrice) => {
+  return candies
+    .filter((candy) => candy.name.startsWith(search) && candy.price < maxPrice)
+    .map((candy) => candy.name);
 };
 
 module.exports = searchCandies;
