@@ -9,7 +9,11 @@ class Thermostat {
     this.temperature += 1;
   }
   down() {
-    // fill in
+    if (this.temperature <= 10) {
+      return 'Minimum temperature reached, can not decrease';
+    } else {
+      this.temperature -= 1;
+    }
   }
 }
 

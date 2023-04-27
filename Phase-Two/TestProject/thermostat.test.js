@@ -1,11 +1,12 @@
 const Thermostat = require('./thermostat');
-const myThermostat = new Thermostat();
 
 describe('Thermostat', () => {
+  let myThermostat;
+
   beforeEach(() => {
-    this.temperature = 20;
-    // add more as you go
+    myThermostat = new Thermostat();
   });
+
   it('returns an initial temperature of 20', () => {
     expect(myThermostat.getTemperature()).toEqual(20);
   });
@@ -16,6 +17,12 @@ describe('Thermostat', () => {
   it('decreases the temperature by 1 whenever down() is called', () => {
     myThermostat.down();
     myThermostat.down();
-    expect(myThermostat.getTemperature).toEqual(20);
+    expect(myThermostat.getTemperature()).toEqual(18);
+  });
+  xit('logs a can not decrease message when trying to decrease temperature to less than 10', () => {
+    this.temperature = 10;
+    expect(myThermostat.down()).toEqual(
+      'Minimum temperature reached, can not decrease'
+    );
   });
 });
