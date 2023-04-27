@@ -6,7 +6,7 @@ class Thermostat {
     return this.temperature;
   }
   up() {
-    // implement code
+    this.temperature += 1;
   }
 }
 
