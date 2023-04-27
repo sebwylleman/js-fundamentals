@@ -17,7 +17,9 @@ describe('ShoppingBasket', () => {
   it('returns 0 as the total price when no candies have been added to the basket', () => {
     expect(myBasket.totalPrice).toEqual(0);
   });
-  xit('returns the sum of prices for each item in the basket', () => {
-    // write test
+  it('returns the sum of prices for each item in the basket', () => {
+    myBasket.addItem(mockCandy1);
+    myBasket.addItem(mockCandy2);
+    expect(myBasket.getTotalPrice()).toEqual(2);
   });
 });
