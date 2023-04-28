@@ -41,4 +41,8 @@ describe('Thermostat', () => {
       'Maximum temperature reached for power saving mode'
     );
   });
+  it('turns power saving mode off', () => {
+    myThermostat.setPowerSavingMode(false);
+    expect(myThermostat.powerSaver).toEqual(false);
+  });
 });
