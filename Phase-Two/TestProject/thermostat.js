@@ -25,6 +25,9 @@ class Thermostat {
       this.powerSaver = false;
     }
   }
+  reset() {
+    this.temperature = 20;
+  }
 }
 
 module.exports = Thermostat;
