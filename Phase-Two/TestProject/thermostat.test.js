@@ -28,4 +28,7 @@ describe('Thermostat', () => {
       'Minimum temperature reached, can not decrease'
     );
   });
+  it('verifies that the power saving mode is on by default', () => {
+    expect(myThermostat.powerSaver).toEqual(true);
+  });
 });
