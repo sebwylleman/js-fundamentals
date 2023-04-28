@@ -1,7 +1,7 @@
 const Thermostat = require('./thermostat');
 
 describe('Thermostat', () => {
-  let myThermostat;
+  let myThermostat; // find out why we declare without initialising anything
 
   beforeEach(() => {
     myThermostat = new Thermostat();
@@ -19,8 +19,11 @@ describe('Thermostat', () => {
     myThermostat.down();
     expect(myThermostat.getTemperature()).toEqual(18);
   });
-  xit('logs a can not decrease message when trying to decrease temperature to less than 10', () => {
-    this.temperature = 10;
+  it('does not allow the temperature to be decreased past 10', () => {
+    for (let i = 0; i < 10; i++) {
+      myThermostat.down();
+    }
+    expect(myThermostat.getTemperature()).toEqual(10);
     expect(myThermostat.down()).toEqual(
       'Minimum temperature reached, can not decrease'
     );
