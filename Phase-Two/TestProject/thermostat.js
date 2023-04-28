@@ -7,10 +7,14 @@ class Thermostat {
     return this.temperature;
   }
   up() {
-    this.temperature += 1;
+    if (this.powerSaver === true && this.temperature === 25) {
+      return 'Maximum temperature reached for power saving mode';
+    } else {
+      this.temperature += 1;
+    }
   }
   down() {
-    if (this.temperature <= 10) {
+    if (this.temperature === 10) {
       return 'Minimum temperature reached, can not decrease';
     } else {
       this.temperature -= 1;

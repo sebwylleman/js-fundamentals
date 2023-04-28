@@ -1,7 +1,7 @@
 const Thermostat = require('./thermostat');
 
 describe('Thermostat', () => {
-  let myThermostat; // find out why we declare without initialising anything
+  let myThermostat;
 
   beforeEach(() => {
     myThermostat = new Thermostat();
@@ -30,5 +30,15 @@ describe('Thermostat', () => {
   });
   it('verifies that the power saving mode is on by default', () => {
     expect(myThermostat.powerSaver).toEqual(true);
+  });
+  xit('does not allow the temperature to be increased past 25 if powerSaver mode is enabled', () => {
+    myThermostat.setPowerSavingMode(true);
+    for (let i = 0; i < 5; i++) {
+      myThermostat.up();
+    }
+    expect(myThermostat.getTemperature()).toEqual(25);
+    expect(myThermostat.up()).toEqual(
+      'Maximum temperature reached for power saving mode'
+    );
   });
 });
