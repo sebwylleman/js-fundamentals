@@ -45,4 +45,9 @@ describe('Thermostat', () => {
     myThermostat.setPowerSavingMode(false);
     expect(myThermostat.powerSaver).toEqual(false);
   });
+  it('resets the thermostat temperature back to its default state 20', () => {
+    myThermostat.up();
+    myThermostat.reset();
+    expect(myThermostat.getTemperature()).toEqual(20);
+  });
 });
