@@ -1,6 +1,7 @@
 class Thermostat {
   constructor() {
     this.temperature = 20;
+    this.powerSaver = true;
   }
   getTemperature() {
     return this.temperature;
