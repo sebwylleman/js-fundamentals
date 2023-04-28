@@ -31,7 +31,7 @@ describe('Thermostat', () => {
   it('verifies that the power saving mode is on by default', () => {
     expect(myThermostat.powerSaver).toEqual(true);
   });
-  xit('does not allow the temperature to be increased past 25 if powerSaver mode is enabled', () => {
+  it('does not allow the temperature to be increased past 25 if powerSaver mode is enabled', () => {
     myThermostat.setPowerSavingMode(true);
     for (let i = 0; i < 5; i++) {
       myThermostat.up();
